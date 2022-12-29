@@ -13,10 +13,10 @@ label_file = data_dir/'day-vs-night.txt' # Name of your label file
 image_file = data_dir/'tests'/'day_3.jpg' # Name of image for classification
 
 # Load the labels
-labels = read_label_file(label_file)
+labels = read_label_file(f"{label_file}")
 
 # Load the model
-interpreter = make_interpreter(model_file)
+interpreter = make_interpreter(f"{model_file}")
 interpreter.allocate_tensors()
 
 # Load the image
