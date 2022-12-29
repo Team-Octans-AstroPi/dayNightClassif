@@ -20,10 +20,10 @@ interpreter = make_interpreter(f"{model_file}")
 interpreter.allocate_tensors()
 
 # Load the image
-image = Image.open(image_file).convert('RGB').resize((224, 224), Image.ANTIALIAS)
+image = Image.open(image_file).convert('RGB').resize((224, 224), Image.NEAREST)
 
 # Run the inference
-_, scale = common.set_resized_input(interpreter, image.size, lambda size: image.resize(size, Image.ANTIALIAS))
+_, scale = common.set_resized_input(interpreter, image.size, lambda size: image.resize(size, Image.NEAREST))
 interpreter.invoke()
 classes = classify.get_classes(interpreter, top_k=1, score_threshold=0.0)
 
