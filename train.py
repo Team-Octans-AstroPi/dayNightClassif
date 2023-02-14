@@ -27,10 +27,10 @@ def contents(folder):
 script_dir = Path(__file__).parent.resolve()
 # specify the input and output (retrained) model
 model_path = script_dir/'models'/'mobilenet_v1_1.0_224_l2norm_quant_edgetpu.tflite'
-out_model_path = script_dir/'models'/'astropi-day-vs-night.tflite'
+out_model_path = script_dir/'models'/'octansDayNightIR.tflite'
 #  specify where the labels and labelled training data are
 data_dir = script_dir/'data'
-labels_path = data_dir/'day-vs-night.txt'
+labels_path = data_dir/'dataLabels.txt'
 
 '''
 Create an instance of `ImprintingEngine` by specifying a compatible 
