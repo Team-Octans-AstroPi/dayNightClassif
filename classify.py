@@ -7,9 +7,9 @@ from pycoral.utils.dataset import read_label_file
 
 script_dir = Path(__file__).parent.resolve()
 
-model_file = script_dir/'models/astropi-day-vs-night.tflite' # name of model
+model_file = script_dir/'models/octansDayNightIR.tflite' # name of model
 data_dir = script_dir/'data'
-label_file = data_dir/'day-vs-night.txt' # Name of your label file
+label_file = data_dir/'dataLabels.txt' # Name of your label file
 image_file = data_dir/'tests'/'day_3.jpg' # Name of image for classification
 
 # Load the labels
